@@ -4,6 +4,9 @@
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
     <ion-title>Agregar Visita</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="loginForm.ngSubmit.emit()">Agendar</ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
@@ -13,32 +16,32 @@
       <ion-card-subtitle>Informacion de visitante</ion-card-subtitle>
     </ion-card-header>
     <ion-card-content>
-        <form>
-            <ion-list>
-              <ion-item>
-                <ion-label position="floating"></ion-label>
-                <ion-input placeholder="Nombre"></ion-input>
-                <ion-input placeholder="Apellido paterno"></ion-input>
-                <ion-input placeholder="Apellido materno"></ion-input>
-                <ion-icon name="person" slot="start"></ion-icon>
-              </ion-item>
-              <ion-item>
-                <ion-label position="floating">Fecha de entrada: </ion-label>
-                <ion-datetime displayFormat="DD MM YYYY" min="2019" max="2050"></ion-datetime>
-                <ion-icon name="calendar" slot="start"></ion-icon>
-              </ion-item>
-              <ion-item>
-                <ion-label position="floating">Hora de entrada: </ion-label>
-                <ion-datetime displayFormat="HH:mm"></ion-datetime>
-                <ion-icon name="time" slot="start"></ion-icon>
-              </ion-item>
-              <ion-item>
-                <ion-label position="floating">Description</ion-label>
-                <ion-textarea rows="5"></ion-textarea>
-              </ion-item>
-            </ion-list>
-          </form>
+      <form>
+        <ion-list>
+          <ion-item>
+            <ion-label position="floating"></ion-label>
+            <ion-input placeholder="Nombre"></ion-input>
+            <ion-input placeholder="Apellido paterno"></ion-input>
+            <ion-input placeholder="Apellido materno"></ion-input>
+            <ion-icon name="person" slot="start"></ion-icon>
+          </ion-item>
+          <ion-item>
+            <ion-label position="floating">Fecha de entrada: </ion-label>
+            <ion-datetime displayFormat="DD MM YYYY" min="2019" max="2050"></ion-datetime>
+            <ion-icon name="calendar" slot="start"></ion-icon>
+          </ion-item>
+          <ion-item>
+            <ion-label position="floating">Hora de entrada: </ion-label>
+            <ion-datetime displayFormat="HH:mm"></ion-datetime>
+            <ion-icon name="time" slot="start"></ion-icon>
+          </ion-item>
+          <ion-item>
+            <ion-label position="floating">Description</ion-label>
+            <ion-textarea rows="5"></ion-textarea>
+          </ion-item>
+        </ion-list>
+      </form>
     </ion-card-content>
   </ion-card>
- 
+
 </ion-content>

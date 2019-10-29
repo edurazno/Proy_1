@@ -1,9 +1,59 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>login</ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content>
-
+<ion-content color="primary">
+  <ion-grid style="height: 80%">
+    <ion-row justify-content-center align-items-center style="height: 100%">
+      <form>
+        <ion-card color="light">
+          <ion-card-header class="ion-text-center">
+            <ion-avatar style="margin:auto" class="ion-margin-vertical">
+              <img src="../../../assets/icon/favicon.png">
+            </ion-avatar>
+            <ion-card-title>Login</ion-card-title>
+          </ion-card-header>
+          <ion-card-content class="ion-margin-top">
+            <ion-item class="ion-margin-top">
+              <ion-icon name="contact" slot="start"></ion-icon>
+              <ion-label position="floating">Usuario</ion-label>
+              <ion-input></ion-input>
+            </ion-item>
+            <ion-item class="ion-margin-vertical">
+              <ion-icon name="unlock" slot="start"></ion-icon>
+              <ion-label position="floating">Contraseña</ion-label>
+              <ion-input type="password"></ion-input>
+            </ion-item>
+            <ion-button expand="block" (click)="login()" class="ion-margin" color="primary">Iniciar Session</ion-button>
+            <ion-button color="medium" expand="block" class="ion-margin" routerLink="/register"
+              routerDirection="forward">
+              Registrar</ion-button>
+          </ion-card-content>
+        </ion-card>
+      </form>
+    </ion-row>
+  </ion-grid>
 </ion-content>
+<!--
+<ion-content color="primary">
+    <form>
+      <ion-card color="light">
+      <ion-grid>
+        <ion-row color="primary" justify-content-center>
+          <ion-col align-self-center size-md="6" size-lg="5" size-xs="12">
+            <div text-center>
+              <h3>Login</h3>
+            </div>
+            <div padding>
+              <ion-item>
+                <ion-input name="email" type="email" placeholder="your@email.com" ngModel required></ion-input>
+              </ion-item>
+              <ion-item>
+                <ion-input name="password" type="password" placeholder="Password" ngModel required></ion-input>
+              </ion-item>
+            </div>
+            <div padding>
+              <ion-button size="large" type="submit" [disabled]="form.invalid" expand="block">Login</ion-button>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card>
+    </form>
+  </ion-content>-->

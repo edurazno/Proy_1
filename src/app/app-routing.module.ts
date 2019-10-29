@@ -1,11 +1,15 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { AutentificacionGuardService } from './services/autentificacion-guard.service';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'login', pathMatch: 'full' },
-  //{ path: 'menu', loadChildren: './pages/menu/menu.module#MenuPageModule' },
+  { path: '', redirectTo: 'menu', pathMatch: 'full' }, 
   { path: 'login', loadChildren: './pages/login/login.module#LoginPageModule' },
-
+  {
+    path:'menu',
+    canActivate:[AutentificacionGuardService],
+    loadChildren: './pages/menu/menu.module#MenuPageModule'
+  }
 
 
 ];
